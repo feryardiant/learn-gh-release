@@ -27,7 +27,7 @@ jobs:
 
           echo "should-upload=1" >> $GITHUB_OUTPUT
 
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: steps.dist-archive.outputs.should-upload == '1'
         with:
           name: release-archives
@@ -40,9 +40,9 @@ jobs:
     if: |-
       needs.build.outputs.should-upload == '1' &&
       startsWith(github.event.head_commit.message, 'chore(release):')
-    uses: projek-xyz/actions/.github/workflows/uploads.yml@main
+    uses: projek-xyz/actions/.github/workflows/uploads.yml@429c195e277caa9fed01a9d550794dc61ad90c1f # main @ 2026-10-14
     with:
-      workflow_name: ${{ github.workflow }}
+      workflow-name: ${{ github.workflow }}
 
     permissions:
       contents: write

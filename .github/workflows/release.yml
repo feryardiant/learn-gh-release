@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     name: Publish
-    uses: projek-xyz/actions/.github/workflows/release.yml@main
+    uses: projek-xyz/actions/.github/workflows/release.yml@429c195e277caa9fed01a9d550794dc61ad90c1f # main @ 2026-10-14
 
     permissions:
       contents: write
@@ -16,9 +16,9 @@ jobs:
   update-assets:
     name: Upload assets
     needs: publish
-    uses: projek-xyz/actions/.github/workflows/uploads.yml@main
+    uses: projek-xyz/actions/.github/workflows/uploads.yml@429c195e277caa9fed01a9d550794dc61ad90c1f # main @ 2026-10-14
     with:
-      workflow_name: CI
+      workflow-name: CI
 
     permissions:
       contents: write
@@ -30,7 +30,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: Build
       run: |
@@ -40,7 +40,7 @@ jobs:
         npx @feryardiant/read-changelog > PUBLISH.txt
 
     - name: Upload binaries to release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
