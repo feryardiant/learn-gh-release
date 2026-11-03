@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.0-pre.0](https://github.com/projek-xyz/version/compare/v0.2.9...v0.3.0-pre.0) (2026-11-03)
+
+### Features
+
+* **deps-dev:** bump fast-uri from 3.1.7 to 3.1.9 in the npm_and_yarn group across 1 directory ([#4](https://github.com/projek-xyz/version/issues/4)) ([0f9824a](https://github.com/projek-xyz/version/commit/0f9824a4283f454d4e251d8a1dae12e79f072c20))
+
 ## [0.2.9](https://github.com/projek-xyz/version/compare/v0.2.8...v0.2.9) (2026-05-17)
 
 
